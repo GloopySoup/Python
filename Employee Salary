@@ -45,7 +45,7 @@ class Employee:
         if Employee._base_salaries[new_level] < Employee._base_salaries[self.level]:
             raise ValueError(f"Cannot change to lower level.")
         print(f"'{self.name}' promoted to '{new_level}'.")
-        self._salary = Employee._base_salaries[new_level]
+        self.salary = Employee._base_salaries[new_level]
         self._level = new_level
 
     @property
