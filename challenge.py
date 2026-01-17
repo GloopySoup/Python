@@ -19,8 +19,17 @@ def dict_maker(x):
         values = items[i].split(",")
         for y in range(len(keys_splitted)):
             list_of_dicts[i][keys_splitted[y]] = [values[y]]
-    return list_of_dicts
+
+    new_list_of_dicts = []
+
+    for d in list_of_dicts:
+        new_dict = {}
+        for key, value in d.items():
+            new_dict[key.strip()] = str(value).strip("['] ")
+        new_list_of_dicts.append(new_dict)
+
+    return new_list_of_dicts
+
 
 print(dict_maker(string1))
-print(dict_maker(string2))
-
+#print(dict_maker(string2))
