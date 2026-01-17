@@ -1,3 +1,4 @@
+#hi
 class Employee:
     _base_salaries = {
         'trainee': 1000,
