@@ -2,10 +2,11 @@
 from tkinter import *
 from tkinter import filedialog
 
+input_data=""""""
 def openFile():
-    filepath = filedialog.askopenfilename( filetypes= (("csv files","*.csv"))
+    filepath = filedialog.askopenfilename()
     file = open(filepath,'r')
-    print(file.read())
+    input_data = file.read()
     file.close()
 
 window = Tk()
@@ -40,6 +41,3 @@ def dict_maker(x):
         new_list_of_dicts.append(new_dict)
 
     return new_list_of_dicts
-
-openFile()
-print(dict_maker(string))
