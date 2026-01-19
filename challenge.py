@@ -1,11 +1,22 @@
-string1 = """product_id, product_name, product_price
-1, doom, 10
-2, cake, 25"""
 
-string2 = """team_id, team_name, team_tsales
-3, Hello United, 14
-5, FootballFC, 20
-7, Team, 3"""
+from tkinter import *
+from tkinter import filedialog
+
+def openFile():
+    filepath = filedialog.askopenfilename( filetypes= (("csv files","*.csv"))
+    file = open(filepath,'r')
+    print(file.read())
+    file.close()
+
+window = Tk()
+button = Button(text="Choose CSV file to be parsed into dictionary",command=openFile)
+button.pack()
+window.mainloop()
+
+
+string = input_data.replace(";", ",")
+print(string)
+
 
 def dict_maker(x):
     list_of_dicts = []
@@ -30,6 +41,5 @@ def dict_maker(x):
 
     return new_list_of_dicts
 
-
-print(dict_maker(string1))
-#print(dict_maker(string2))
+openFile()
+print(dict_maker(string))
