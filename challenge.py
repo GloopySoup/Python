@@ -1,21 +1,6 @@
+string = input("Enter your CSV file as a string: ")
 
-from tkinter import *
-from tkinter import filedialog
-
-input_data=""""""
-def openFile():
-    filepath = filedialog.askopenfilename()
-    file = open(filepath,'r')
-    input_data = file.read()
-    file.close()
-
-window = Tk()
-button = Button(text="Choose CSV file to be parsed into dictionary",command=openFile)
-button.pack()
-window.mainloop()
-
-
-string = input_data.replace(";", ",")
+string = string.replace(";", ",")
 print(string)
 
 
