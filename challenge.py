@@ -1,6 +1,18 @@
-string = input("Enter your CSV file as a string: ")
 
-string = string.replace(";", ",")
+from tkinter import *
+from tkinter import filedialog
+string=""""""
+def openFile():
+    filepath = filedialog.askopenfilename()
+    file = open(filepath,'r')
+    string = file.read()
+    file.close()
+window = Tk()
+button = Button(text="Open",command=openFile)
+button.pack()
+window.mainloop()
+
+#string = string.replace(";", ",")
 print(string)
 
 
