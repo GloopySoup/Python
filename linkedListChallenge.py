@@ -81,11 +81,17 @@ class LinkedList ():
         print(f"The middle Node is Node {int(length)}: {middle_node.to_string()}")
 
 
+def create_LL():
+    myList = LinkedList()
+    next = "yes"
+    while next.upper() == "YES":
+        value = input("Enter the value for the node: ")
+        myList.add(value)
+        next = input("Would you like to add another node? (Yes/No): ")
+    myList.print_list()
+    myList.get_middle_node()
 
-myList = LinkedList()
-myList.add(5)
-myList.print_list()
-myList.get_middle_node()
+create_LL()
 
 
 
