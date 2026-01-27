@@ -78,14 +78,12 @@ class LinkedList ():
         for i in range(int(length) - 1):
             if middle_node.get_next is not None:
                 middle_node = middle_node.get_next()
-        print(f"The Node is Node {int(length)}: {middle_node.to_string()}")
+        print(f"The middle Node is Node {int(length)}: {middle_node.to_string()}")
 
 
 
 myList = LinkedList()
 myList.add(5)
-myList.add(8)
-myList.add(12)
 myList.print_list()
 myList.get_middle_node()
 
