@@ -65,7 +65,7 @@ class LinkedList ():
         current_node = self.head
         size = self.get_size()
         for i in range(size):
-            print(f"Node {i}: {current_node.to_string()}")
+            print(f"Node {i+1}: {current_node.to_string()}")
             current_node = current_node.get_next()
 
 myList = LinkedList()
