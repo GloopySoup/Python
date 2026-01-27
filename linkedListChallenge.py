@@ -1,4 +1,3 @@
-import math
 class Node:
     def __init__ (self, e, n = None):
         self.element = e
