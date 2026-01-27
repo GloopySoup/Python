@@ -1,3 +1,4 @@
+import math
 class Node:
     def __init__ (self, e, n = None):
         self.element = e
@@ -67,12 +68,27 @@ class LinkedList ():
         for i in range(size):
             print(f"Node {i+1}: {current_node.to_string()}")
             current_node = current_node.get_next()
+    
+    def get_middle_node (self):
+        length = self.get_size()
+        middle_node = self.head
+        if length & 1 == 0:
+            length = (length / 2) + 1
+        else:
+             length = (length / 2) + 0.5
+        for i in range(int(length) - 1):
+            if middle_node.get_next is not None:
+                middle_node = middle_node.get_next()
+        print(f"The Node is Node {int(length)}: {middle_node.to_string()}")
+
+
 
 myList = LinkedList()
 myList.add(5)
 myList.add(8)
 myList.add(12)
 myList.print_list()
+myList.get_middle_node()
 
 
 
