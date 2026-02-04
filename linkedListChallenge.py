@@ -11,10 +11,10 @@ class Node:
         self.next_node = n
     
     def get_element (self):
-        return self.get_element
+        return self.element
     
     def set_element (self, e):
-        self.element = e
+        self.get_element = e
     
     def has_next (self):
         if self.get_next() is None:
